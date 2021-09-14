@@ -28,7 +28,15 @@ export default function App() {
                     placeholderTextColor="#A19FA1"
                     style={styles.campo}>                    
                 </TextInput>
+                <TextInput
+                    >
+                </TextInput>
             </View>
+            
+            <View style={styles.fds}>
+                <Text style={styles.texto}>Sing Up for FaceBook</Text>        
+            </View>
+
             <StatusBar style="auto" />
         </View>
     );
@@ -44,12 +52,12 @@ const styles = StyleSheet.create({
         // flex:
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center",
+        //alignItems: "center",
         marginBottom: 70,
         marginRight: 60,
     },
     facebook:{
-        // fontFamily: "Roboto", não sei se está certo
+        fontFamily: "", 
         fontSize: 42.11,
         color: "white",
         // fontStyle: "black", não sei como deixar em negrito
@@ -75,5 +83,12 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         fontSize: 16,
         fontFamily: "Roboto",
+    },
+    texto:{
+        color: "#FFFFFF",
+        textAlign: "center",
+    },
+    fds:{
+        //justifyContent: "flex-end", como infernos eu mando essa poha para baixo vai pro caralho
     },
 });
