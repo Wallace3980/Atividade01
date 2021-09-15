@@ -2,10 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
 
-// Preciso de ajuda em como fazer o submit;
-// Como se faz link
-// talvez mande mensagem novamente perguntando como se coloca mais ao centro ou não
-
+//
 
 export default function App() {
     return(
@@ -28,9 +25,16 @@ export default function App() {
                     placeholderTextColor="#A19FA1"
                     style={styles.campo}>                    
                 </TextInput>
-                <TextInput
-                    >
-                </TextInput>
+                <View style={styles.tanto}>
+                    <Text style={{textAlign:"center",
+                                  color:"white",
+                                  fontSize: 25,
+                                  fontFamily: "Roboto",
+                                  //fontStyle: "bold" não exite a opção para colocar em negrito
+                                }}>
+                        Log In
+                    </Text>
+                </View>
             </View>
             
             <View style={styles.fds}>
@@ -46,34 +50,34 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#465CB1",
-        justifyContent: "center",
+        textAlign: "center",
+        justifyContent: "space-between",
     },
     acima:{
-        // flex:
+        flex: 1,
         flexDirection: "row",
         justifyContent: "center",
-        //alignItems: "center",
-        marginBottom: 70,
+        alignItems: "center",
+        marginBottom: 30,
+        marginTop: 90,
         marginRight: 60,
     },
     facebook:{
-        fontFamily: "", 
         fontSize: 42.11,
         color: "white",
-        // fontStyle: "black", não sei como deixar em negrito
+        //fontStyle: "bold" não exite a opção para colocar em negrito
         marginLeft: 15,
     },
     input:{
-        // flex: 0.5,
+        flex: 1,
         flexDirection: "column",
         alignItems: "center",
-        // justifyContent: "center",
+        marginBottom: 10,
     },
     campo:{
         backgroundColor: "#FFFFFF",
         height: 48,
-        width: 320,
-        // alignItems: "center",
+        width: 320, //usei esse tamanho pois foi o melhor q ficou no celular para visulização
         marginBottom: 20,
         paddingHorizontal: 10,
     },
@@ -84,11 +88,20 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: "Roboto",
     },
+    tanto:{
+        width: 320, //usei esse tamanho pois foi o melhor q ficou no celular para visulização
+        height: 48,
+        textAlign: "center",
+        backgroundColor: "#213873",
+        justifyContent: "center",
+    },
     texto:{
         color: "#FFFFFF",
         textAlign: "center",
     },
     fds:{
-        //justifyContent: "flex-end", como infernos eu mando essa poha para baixo vai pro caralho
+        justifyContent: "center", 
+        marginBottom: 120,
+        marginTop: 100,
     },
 });
