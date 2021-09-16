@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
 
-//
+// "terminado"
 
 export default function App() {
     return(
